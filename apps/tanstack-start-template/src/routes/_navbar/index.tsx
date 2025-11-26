@@ -25,8 +25,8 @@ function Home() {
                     Rick-Rolled
                   </a>
                   ...
-                  <br /> But you can enjoy a beautiful meaningless app to be
-                  used as a Tanstack Start template for whatever you need!
+                  <br />
+                  But you can enjoy a useless recipe webapp!
                 </p>
               </div>
             </div>

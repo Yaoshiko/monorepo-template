@@ -8,12 +8,18 @@ importers:
 
   .:
     devDependencies:
+      '@moonrepo/cli':
+        specifier: ^1.41.7
+        version: 1.41.7
       drizzle-kit:
         specifier: ^0.31.4
-        version: 0.31.4
+        version: 0.31.7
       prettier:
         specifier: 3.6.2
         version: 3.6.2
+      typescript:
+        specifier: ^5.2.2
+        version: 5.8.3
 
   apps/tanstack-start-template:
     dependencies:
@@ -213,7 +219,7 @@ importers:
         version: 24.0.7
       drizzle-kit:
         specifier: ^0.31.4
-        version: 0.31.4
+        version: 0.31.7
       tsx:
         specifier: ^4.20.3
         version: 4.20.3
@@ -972,6 +978,45 @@ packages:
     resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
     engines: {node: '>=18'}
     hasBin: true
+
+  '@moonrepo/cli@1.41.7':
+    resolution: {integrity: sha512-zZdE/2m/V/33B3DZOhsuNwRPme+WZiEpggcK6N2og6FCezD/4AxNjc9uZNPBAj2qaDFl3Q+bgtfrHBjdKy4ilg==}
+    hasBin: true
+
+  '@moonrepo/core-linux-arm64-gnu@1.41.7':
+    resolution: {integrity: sha512-Opa+jmNLYsHMRlJcmIn78kKY+76CT/93BvynxuMICPfaQqJTAR/5WPGre1omehGlkg5rbiVshsNTiaa+2bHzpA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@moonrepo/core-linux-arm64-musl@1.41.7':
+    resolution: {integrity: sha512-0ipCRwg75iFWfsjxIYY9IAm/cMoUy9iUk/qs2+JhruFeDrY6tCdV9Nyo8F2h45WC+/2qwZ7IMEdfWNPJT0TSyA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@moonrepo/core-linux-x64-gnu@1.41.7':
+    resolution: {integrity: sha512-iHLaZF0ryKhFTf5G/dFrQHPEFII9p88pXXUl17U9tjfeziFyksbdkQrZhNv6sfbE0bDJGPA3H5TEMR93ZwXo/A==}
+    cpu: [x64]
+    os: [linux]
+
+  '@moonrepo/core-linux-x64-musl@1.41.7':
+    resolution: {integrity: sha512-0nZMjOBBSGHNUSIGcCBrfxgKVmeZQjmXpeMVfO3YG9e2irFR2neHbNIud6vLapC+StgV2UbrKoExR+HRtoyzuA==}
+    cpu: [x64]
+    os: [linux]
+
+  '@moonrepo/core-macos-arm64@1.41.7':
+    resolution: {integrity: sha512-Z6okifZS8MA6aXFQ1q/Ej45aAq6i2riDgqWB9CmBVqV7JIdJMLP4++ir+FqGu9S0G34SFgspV0g+mrfFgR+/Nw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@moonrepo/core-macos-x64@1.41.7':
+    resolution: {integrity: sha512-mOHO4/Ag331oVAxg1QNfaWCNfrKdy6HsUJXNY11ERvpNsi0Fh+qnZ+if3ZiC9jwUdwjw2MvtCRxrlXgtI/shrQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@moonrepo/core-windows-x64-msvc@1.41.7':
+    resolution: {integrity: sha512-p7CiKyWh4j1lhdF81vcacQmgPLV/di3nU5QXjg1lL2mF296HMx4H8sOlcxD/RieGfFW0Qfg5zIreugCHCNUCeA==}
+    cpu: [x64]
+    os: [win32]
 
   '@napi-rs/wasm-runtime@0.2.11':
     resolution: {integrity: sha512-9DPkXtvHydrcOsopiYpUgPHpmj0HWZKMUnL2dZqpvC42lsratuBG06V5ipyno0fUek5VlFsNQ+AcFATSrJXgMA==}
@@ -2944,8 +2989,8 @@ packages:
     resolution: {integrity: sha512-A0BJ5lrpJVSfnMMXjmeO0xUnoxqsBHWCoqqTnGwGYVdnctqXXUEhJOO7LxmgxJon9tEZFGpe0xPRX0h2v3AANQ==}
     engines: {node: '>=12'}
 
-  drizzle-kit@0.31.4:
-    resolution: {integrity: sha512-tCPWVZWZqWVx2XUsVpJRnH9Mx0ClVOf5YUHerZ5so1OKSlqww4zy1R5ksEdGRcO3tM3zj0PYN6V48TbQCL1RfA==}
+  drizzle-kit@0.31.7:
+    resolution: {integrity: sha512-hOzRGSdyKIU4FcTSFYGKdXEjFsncVwHZ43gY3WU5Bz9j5Iadp6Rh6hxLSQ1IWXpKLBKt/d5y1cpSPcV+FcoQ1A==}
     hasBin: true
 
   drizzle-orm@0.44.2:
@@ -6610,6 +6655,39 @@ snapshots:
       - encoding
       - supports-color
 
+  '@moonrepo/cli@1.41.7':
+    dependencies:
+      detect-libc: 2.0.4
+    optionalDependencies:
+      '@moonrepo/core-linux-arm64-gnu': 1.41.7
+      '@moonrepo/core-linux-arm64-musl': 1.41.7
+      '@moonrepo/core-linux-x64-gnu': 1.41.7
+      '@moonrepo/core-linux-x64-musl': 1.41.7
+      '@moonrepo/core-macos-arm64': 1.41.7
+      '@moonrepo/core-macos-x64': 1.41.7
+      '@moonrepo/core-windows-x64-msvc': 1.41.7
+
+  '@moonrepo/core-linux-arm64-gnu@1.41.7':
+    optional: true
+
+  '@moonrepo/core-linux-arm64-musl@1.41.7':
+    optional: true
+
+  '@moonrepo/core-linux-x64-gnu@1.41.7':
+    optional: true
+
+  '@moonrepo/core-linux-x64-musl@1.41.7':
+    optional: true
+
+  '@moonrepo/core-macos-arm64@1.41.7':
+    optional: true
+
+  '@moonrepo/core-macos-x64@1.41.7':
+    optional: true
+
+  '@moonrepo/core-windows-x64-msvc@1.41.7':
+    optional: true
+
   '@napi-rs/wasm-runtime@0.2.11':
     dependencies:
       '@emnapi/core': 1.4.3
@@ -8849,7 +8927,7 @@ snapshots:
 
   dotenv@17.0.0: {}
 
-  drizzle-kit@0.31.4:
+  drizzle-kit@0.31.7:
     dependencies:
       '@drizzle-team/brocli': 0.10.2
       '@esbuild-kit/esm-loader': 2.6.5

@@ -13,14 +13,15 @@
   - [ ] README
   - [x] Form composition
 - Infra & DevOps
-  - [ ] Configure HTTP proxy (Traeffik)
-  - [ ] Configure cloudflare in swarm for HA / load balancing
+  - [x] Configure HTTP proxy (Traeffik)
+  - [x] Configure cloudflare in swarm for HA / load balancing
   - [x] Configure public hostname
   - [ ] Configure observability tools
   - [ ] Configure logging tools
   - [ ] Manage VLAN tags, firewall, ...
-  - [ ] GitHub CICD
-    - [ ] Configure GitHub workflow
-    - [ ] Setup GitHub runner in Proxmox
+  - [x] GitHub CICD
+    - [x] Configure GitHub workflow
+    - [x] Setup GitHub runner in Proxmox
   - [ ] Change SMTP app-specific password and protect .env.secrets with git-crypt
   - [ ] Share volume between Docker Swarm nodes
+- [ ] Rename repository to monorepo-template

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+
+# Ensures that database container is up and running
 function ensure_db_container {
     local container_name="$DB_CONTAINER"
 

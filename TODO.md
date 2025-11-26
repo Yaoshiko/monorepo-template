@@ -24,3 +24,4 @@
     - [x] Setup GitHub runner in Proxmox
   - [ ] Change SMTP app-specific password and protect .env.secrets with git-crypt
   - [ ] Share volume between Docker Swarm nodes
+- [ ] Rename repository to monorepo-template

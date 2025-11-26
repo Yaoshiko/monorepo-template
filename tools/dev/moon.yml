@@ -5,7 +5,7 @@ dependsOn:
   - 'tanstack-start-template'
 
 tasks:
-  dev:
+  start:
     description: Start the development server.
     local: true
     deps:

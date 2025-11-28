@@ -33,7 +33,10 @@ export function useAuthEmail() {
         }
         logger.debug(`Verification email sent to ${user.email}`);
       } catch (e) {
-        logger.warn(`Failed to send verification email to ${user.email}`, e);
+        logger.warn(
+          { error: e },
+          `Failed to send verification email to ${user.email}`
+        );
       }
     },
     sendResetPassword: async (user: authSchema.User, url: string) => {
@@ -53,7 +56,10 @@ export function useAuthEmail() {
         }
         logger.debug(`Reset password email sent to ${user.email}`);
       } catch (e) {
-        logger.warn(`Failed to send reset password email to ${user.email}`, e);
+        logger.warn(
+          { error: e },
+          `Failed to send reset password email to ${user.email}`
+        );
       }
     }
   };

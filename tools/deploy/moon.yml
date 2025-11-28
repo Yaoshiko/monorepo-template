@@ -4,7 +4,7 @@ tags:
   - swarm
 
 dependsOn:
-  - 'tanstack-start-template'
+  - 'web'
   - 'drizzle'
   - 'database'
 

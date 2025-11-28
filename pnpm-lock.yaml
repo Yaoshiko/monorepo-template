@@ -21,7 +21,7 @@ importers:
         specifier: ^5.2.2
         version: 5.8.3
 
-  apps/tanstack-start-template:
+  apps/web:
     dependencies:
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.14

@@ -42,7 +42,7 @@ With the sake of tring new tools and having an easily-extendable template, this 
 Moonrepo projects are structured as follows:
 
 - `apps`: where to create every application service you want to spin up (just remember to update `tools/deploy/docker-swarm-template.yml` accordingly)
-  - `tanstack-start-template`: the main webapp, built with TanStack Start and ShadCN;
+  - `web`: the main webapp, built with TanStack Start and ShadCN;
 - `packages`: shared packages across apps (e.g., UI components, utils, etc);
   - `drizzle`: Typescript lib to manage interactions via Drizzle ORM and one-off Docker to run migrations;
 - `tools`: utilities, mostly for DevOps and local development purposes

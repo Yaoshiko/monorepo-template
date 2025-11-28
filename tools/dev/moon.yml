@@ -2,7 +2,7 @@ language: shell
 
 dependsOn:
   - 'drizzle'
-  - 'tanstack-start-template'
+  - 'web'
 
 tasks:
   start:
@@ -11,7 +11,7 @@ tasks:
     deps:
       - '^:install'
       - 'drizzle:migrate'
-      - 'tanstack-start-template:dev'
+      - 'web:dev'
 
   db-run:
     description: Run the database container.

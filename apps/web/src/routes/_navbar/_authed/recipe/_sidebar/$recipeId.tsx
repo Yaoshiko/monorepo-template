@@ -56,7 +56,7 @@ function Deferred() {
       navigate({ to: '/recipe' });
       router.invalidate();
     } catch (error) {
-      logger.warn({ error: error }, `Failed to delete recipe ${recipeId}`);
+      logger.warn({ err: error }, `Failed to delete recipe ${recipeId}`);
       toast.error('Failed to delete recipe');
     }
   };

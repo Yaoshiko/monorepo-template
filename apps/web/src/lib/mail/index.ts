@@ -34,7 +34,7 @@ export function useAuthEmail() {
         logger.debug(`Verification email sent to ${user.email}`);
       } catch (e) {
         logger.warn(
-          { error: e },
+          { err: e },
           `Failed to send verification email to ${user.email}`
         );
       }
@@ -57,7 +57,7 @@ export function useAuthEmail() {
         logger.debug(`Reset password email sent to ${user.email}`);
       } catch (e) {
         logger.warn(
-          { error: e },
+          { err: e },
           `Failed to send reset password email to ${user.email}`
         );
       }

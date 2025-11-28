@@ -21,6 +21,10 @@ yarn.lock
 
 /dist/
 
+.output
+.tanstack
+.nitro
+
 # moon
 .moon/cache
 .moon/docker

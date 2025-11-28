@@ -34,7 +34,7 @@ export function useAuthEmail() {
         logger.debug(`Verification email sent to ${user.email}`);
       } catch (e) {
         logger.warn(
-          { err: e },
+          { err: e, email: user.email },
           `Failed to send verification email to ${user.email}`
         );
       }

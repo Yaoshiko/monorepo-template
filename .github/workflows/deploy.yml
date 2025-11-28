@@ -8,7 +8,7 @@ on:
 
   # Trigger when build workflow completes successfully
   workflow_run:
-    workflows: ['Build images']
+    workflows: ['Build']
     types:
       - completed
     branches:

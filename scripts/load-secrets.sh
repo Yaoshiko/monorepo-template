@@ -32,7 +32,7 @@ for file in "$secrets_dir/${PROJECT_NAME}_"*; do
   # Export the secret value into the environment variable
   # Use printf to avoid trailing newlines issues when printing; do not print the secret value itself.
   export "$env_name"="$(< "$file")"
-  echo "Secret loaded into \\$$env_name"
+  printf 'Loaded secret %s\n' "$env_name"
 done
 
 if [ "$found" = false ]; then

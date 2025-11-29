@@ -51,13 +51,12 @@ services:
         - 'traefik.enable=false'
 
   app:
-    image: docker-swarm-01.local:5000/monorepo-template/app:1.3.0
+    image: docker-swarm-01.local:5000/monorepo-template/app:1.5.0
     secrets:
       - monorepo-template_DB_PASSWORD
       - monorepo-template_BETTER_AUTH_SECRET
       - monorepo-template_RESEND_API_KEY
       - monorepo-template_GOOGLE_CLIENT_SECRET
-      - monorepo-template_GITHUB_CLIENT_SECRET
     <<: *load-secrets-config
     environment:
       PUBLIC_BASEURL: https://donut.yaoshiko.com
@@ -98,8 +97,6 @@ secrets:
   monorepo-template_RESEND_API_KEY:
     external: true
   monorepo-template_GOOGLE_CLIENT_SECRET:
-    external: true
-  monorepo-template_GITHUB_CLIENT_SECRET:
     external: true
 
 configs:

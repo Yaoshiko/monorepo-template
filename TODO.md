@@ -4,24 +4,25 @@
   - [x] Implement mail sender
   - [x] Re-implement mail templates with mjml
   - [x] Reset password pages
-  - [ ] Configure data layer with createIsomorphicFn to combine SSR and client APIs: https://discordapp.com/channels/719702312431386674/1340798353679843469
-  - [ ] Manage abort controllers
   - [x] Improve logging (https://github.com/pinojs/pino)
   - [ ]Auth providers:
     - [ ] Google
     - [ ] GitHub
-  - [ ] README
+  - [x] README
   - [x] Form composition
 - Infra & DevOps
   - [x] Configure HTTP proxy (Traeffik)
   - [x] Configure cloudflare in swarm for HA / load balancing
   - [x] Configure public hostname
-  - [ ] Configure observability tools
-  - [ ] Configure logging tools
-  - [ ] Manage VLAN tags, firewall, ...
+  - [x] Fix automation for Deploy workflow
   - [x] GitHub CICD
     - [x] Configure GitHub workflow
     - [x] Setup GitHub runner in Proxmox
   - [ ] Change SMTP app-specific password and protect .env.secrets with git-crypt
+- [x] Rename repository to monorepo-template
+- Issue to open
+  - [ ] Configure observability tools
+  - [ ] Configure logging tools
   - [ ] Share volume between Docker Swarm nodes
-- [ ] Rename repository to monorepo-template
+  - [ ] Manage abort controllers
+  - [ ] Configure data layer with createIsomorphicFn to combine SSR and client APIs: https://discordapp.com/channels/719702312431386674/1340798353679843469

@@ -1,12 +1,17 @@
 node_modules
 package-lock.json
 yarn.lock
-.env.secrets
+
+# Secrets
+.env.secrets filter=git-crypt diff=git-crypt
 
 .DS_Store
 .cache
 .vercel
 .pnpm-store
+.output
+.tanstack
+.nitro
 
 /build/
 /api/
@@ -20,10 +25,6 @@ yarn.lock
 /playwright/.cache/
 
 /dist/
-
-.output
-.tanstack
-.nitro
 
 # moon
 .moon/cache

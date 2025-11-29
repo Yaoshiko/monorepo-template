@@ -38,6 +38,16 @@ jobs:
             echo "🚀 Deployment triggered by successful build workflow"
           fi
 
+      - name: Install git-crypt
+        run: sudo apt-get update && sudo apt-get install -y git-crypt
+
+      - name: Restore git-crypt key
+        env:
+          GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY_BASE64 }}
+        run: |
+          echo "$GIT_CRYPT_KEY" | base64 --decode > git-crypt-key
+          git-crypt unlock git-crypt-key
+
       - name: Trigger Portainer Stack Redeploy
         id: redeploy
         run: moon :deploy

@@ -7,7 +7,7 @@
   - [x] Improve logging (https://github.com/pinojs/pino)
   - [ ]Auth providers:
     - [x] Google
-    - [ ] GitHub
+    - [x] GitHub
   - [x] README
   - [x] Form composition
 - Infra & DevOps

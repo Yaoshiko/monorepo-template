@@ -57,6 +57,7 @@ services:
       - ${PROJECT_NAME}_BETTER_AUTH_SECRET
       - ${PROJECT_NAME}_RESEND_API_KEY
       - ${PROJECT_NAME}_GOOGLE_CLIENT_SECRET
+      - ${PROJECT_NAME}_GITHUB_CLIENT_SECRET
     <<: *load-secrets-config
     environment:
       PUBLIC_BASEURL: ${PUBLIC_BASEURL}
@@ -97,6 +98,8 @@ secrets:
   ${PROJECT_NAME}_RESEND_API_KEY:
     external: true
   ${PROJECT_NAME}_GOOGLE_CLIENT_SECRET:
+    external: true
+  ${PROJECT_NAME}_GITHUB_CLIENT_SECRET:
     external: true
 
 configs:

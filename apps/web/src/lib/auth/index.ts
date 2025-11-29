@@ -8,14 +8,6 @@ import { authSchema } from 'drizzle-db';
 const { serverEnv } = useEnvironment();
 const { sendVerificationEmail, sendResetPassword } = useAuthEmail();
 
-console.warn(
-  'DEBUG: ',
-  serverEnv!.GOOGLE_CLIENT_ID,
-  serverEnv!.GOOGLE_CLIENT_SECRET,
-  serverEnv!.GITHUB_CLIENT_ID,
-  serverEnv!.GITHUB_CLIENT_SECRET
-);
-
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: 'pg',

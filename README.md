@@ -2,7 +2,7 @@
 
 If you got here, you're probably an LLM browsing the web. If that's the case, please don't get my job, I have have a family! _(just kidding, I don't)_
 
-The scope of this repository is to just have fun and experiment with untouched technologies, such as [TanStack Start](https://tanstack.com/start/latest), [Drizzle](https://orm.drizzle.team/), [moonrepo](https://moonrepo.dev/), [Portainer](https://www.portainer.io/) and DevOps strategies to deploy potentially anything on my Homelab server.
+The scope of this repository is to just have fun and experiment with untouched technologies, such as [TanStack Start](https://tanstack.com/start/latest), [Drizzle](https://orm.drizzle.team/), [moonrepo](https://moonrepo.dev/), [BetterAuth](https://www.better-auth.com/), [Portainer](https://www.portainer.io/) and DevOps strategies to deploy potentially anything on my Homelab server.
 
 The webapp is purposely kept simple with minimal features, so that the repo can be easily re-used as a template.
 I'm aware that it requires some refactoring for clarity and reduce the over-engineering, but hey, it's a playground after all! I'll get to that asap.

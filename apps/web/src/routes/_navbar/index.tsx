@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const sequence = async () => {
       // Initial State: donut off-screen, bites are invisible
-      controls.set({ opacity: 1, x: -800, rotate: 0 });
+      controls.set({ opacity: 1, x: '-50vw', rotate: 0 });
       biteControls.set({ opacity: 0, x: -100, y: -100 });
 
       // Rolling animation
@@ -46,7 +46,7 @@ function Home() {
             <div className="z-10 flex flex-col items-center gap-6 text-center">
               <motion.div
                 className="relative flex h-64 w-64 items-center justify-center"
-                initial={{ x: -800 }}
+                initial={{ x: '-50vw' }}
                 animate={controls}
               >
                 <img src="/donut.svg" alt="Donut" className="h-full w-full" />

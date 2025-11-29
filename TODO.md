@@ -18,7 +18,7 @@
   - [x] GitHub CICD
     - [x] Configure GitHub workflow
     - [x] Setup GitHub runner in Proxmox
-  - [ ] Change SMTP app-specific password and protect .env.secrets with git-crypt
+  - [x] Change SMTP app-specific password and protect .env.secrets with git-crypt
 - [x] Rename repository to monorepo-template
 - Issue to open
   - [ ] Configure observability tools

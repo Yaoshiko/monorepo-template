@@ -2,9 +2,6 @@ node_modules
 package-lock.json
 yarn.lock
 
-# Secrets
-.env.secrets filter=git-crypt diff=git-crypt
-
 .DS_Store
 .cache
 .vercel

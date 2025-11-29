@@ -6,7 +6,7 @@
   - [x] Reset password pages
   - [x] Improve logging (https://github.com/pinojs/pino)
   - [ ]Auth providers:
-    - [ ] Google
+    - [x] Google
     - [ ] GitHub
   - [x] README
   - [x] Form composition

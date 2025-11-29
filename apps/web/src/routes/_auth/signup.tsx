@@ -4,6 +4,9 @@ import { Button } from 'src/components/ui/button';
 import { z } from 'zod';
 import { toast } from 'sonner';
 import { useAppForm } from 'src/components/form';
+import { useLogger } from '@/lib/logger';
+
+const { logger } = useLogger();
 
 export const Route = createFileRoute('/_auth/signup')({
   component: SignUp
@@ -50,6 +53,17 @@ function SignUp() {
       }
     }
   });
+
+  const socialSignup = async (provider: 'google' | 'github') => {
+    logger.info(`Signing up with ${provider}`);
+    const res = await authClient.signIn.social({
+      provider
+    });
+    if (res.error) {
+      logger.error({ err: res.error }, `Sign up with ${provider} failed`);
+      toast.error(`Sign up with ${provider} failed`);
+    }
+  };
 
   return (
     <div className="flex min-h-screen items-center justify-center overflow-y-auto py-20">
@@ -103,14 +117,31 @@ function SignUp() {
               Or sign up with
             </span>
           </div>
-          <Button variant="outline" className="w-full">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => socialSignup('google')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M11.9996631,2.00067387 C14.4835037,1.9712793 16.8828349,2.90455669 18.6906006,4.60209273 L18.6906006,4.60209273 L15.8356536,7.45703971 C14.8031696,6.47232184 13.4252994,5.93587105 11.9996631,5.95791698 C9.39089556,5.95791698 7.17528033,7.71791646 6.38530144,10.0878531 C5.96642891,11.3297735 5.96642891,12.6745747 6.38530144,13.916495 L6.38530144,13.916495 C7.18262898,16.2827574 9.39456988,18.0427569 12.0033374,18.0427569 C13.351813,18.0427569 14.5092239,17.6973708 15.4057581,17.0874336 L15.402,17.089 C16.3863118,16.4358541 17.0792723,15.4353938 17.3495215,14.2951678 L17.4009141,14.0487706 L11.9996631,14.0487706 L11.9996631,10.1980828 L21.4316436,10.1980828 C21.5492219,10.8668091 21.6043367,11.5502327 21.6043367,12.229982 C21.6043367,15.2723193 20.5167378,17.8443436 18.6244628,19.5859715 L18.626,19.583 C17.0430672,21.0480315 14.8932217,21.9217835 12.349027,21.9949981 L11.9996631,22 C8.21878734,22 4.76125181,19.8688941 3.06371577,16.4921937 L3.06371577,16.4921937 L2.91718349,16.1875756 C1.64723712,13.4295023 1.69608121,10.2367943 3.06371577,7.51215452 L3.06371577,7.51215452 L3.20922038,7.23336735 C4.95358661,4.01502932 8.32381166,2.00067387 11.9996631,2.00067387 Z"
+                fill="currentColor"
+              />
+            </svg>
+            Sign up with Google
+          </Button>
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => socialSignup('github')}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
                 d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
                 fill="currentColor"
               />
             </svg>
-            Signup with GitHub
+            Sign up with GitHub
           </Button>
           <div className="text-center text-sm">
             Already have an account?{' '}

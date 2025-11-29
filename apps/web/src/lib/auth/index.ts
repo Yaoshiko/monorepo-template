@@ -14,6 +14,12 @@ export const auth = betterAuth({
     schema: authSchema
   }),
   trustedOrigins: [serverEnv!.PUBLIC_BASEURL],
+  socialProviders: {
+    google: {
+      clientId: serverEnv!.GOOGLE_CLIENT_ID!,
+      clientSecret: serverEnv!.GOOGLE_CLIENT_SECRET!
+    }
+  },
   user: {
     additionalFields: {
       firstName: {

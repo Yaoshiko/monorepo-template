@@ -18,6 +18,10 @@ export const auth = betterAuth({
     google: {
       clientId: serverEnv!.GOOGLE_CLIENT_ID!,
       clientSecret: serverEnv!.GOOGLE_CLIENT_SECRET!
+    },
+    github: {
+      clientId: serverEnv!.GITHUB_CLIENT_ID!,
+      clientSecret: serverEnv!.GITHUB_CLIENT_SECRET!
     }
   },
   user: {

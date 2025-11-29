@@ -16,12 +16,10 @@ export const auth = betterAuth({
   trustedOrigins: [serverEnv!.PUBLIC_BASEURL],
   socialProviders: {
     google: {
-      prompt: 'select_account',
       clientId: serverEnv!.GOOGLE_CLIENT_ID!,
       clientSecret: serverEnv!.GOOGLE_CLIENT_SECRET!
     },
     github: {
-      prompt: 'select_account',
       clientId: serverEnv!.GITHUB_CLIENT_ID!,
       clientSecret: serverEnv!.GITHUB_CLIENT_SECRET!
     }

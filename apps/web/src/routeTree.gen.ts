@@ -12,7 +12,6 @@ import { createFileRoute } from '@tanstack/react-router'
 import { createServerRootRoute } from '@tanstack/react-start/server'
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SandboxRouteImport } from './routes/sandbox'
 import { Route as NavbarRouteImport } from './routes/_navbar'
 import { Route as AuthRouteImport } from './routes/_auth'
 import { Route as NavbarIndexRouteImport } from './routes/_navbar/index'
@@ -32,11 +31,6 @@ const NavbarAuthedRecipeRouteImport = createFileRoute(
 )()
 const rootServerRouteImport = createServerRootRoute()
 
-const SandboxRoute = SandboxRouteImport.update({
-  id: '/sandbox',
-  path: '/sandbox',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const NavbarRoute = NavbarRouteImport.update({
   id: '/_navbar',
   getParentRoute: () => rootRouteImport,
@@ -108,7 +102,6 @@ const ApiAuthSplatServerRoute = ApiAuthSplatServerRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/sandbox': typeof SandboxRoute
   '/login': typeof AuthLoginRoute
   '/password-forgot': typeof AuthPasswordForgotRoute
   '/password-reset': typeof AuthPasswordResetRoute
@@ -120,7 +113,6 @@ export interface FileRoutesByFullPath {
   '/recipe/': typeof NavbarAuthedRecipeSidebarIndexRoute
 }
 export interface FileRoutesByTo {
-  '/sandbox': typeof SandboxRoute
   '/login': typeof AuthLoginRoute
   '/password-forgot': typeof AuthPasswordForgotRoute
   '/password-reset': typeof AuthPasswordResetRoute
@@ -134,7 +126,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_auth': typeof AuthRouteWithChildren
   '/_navbar': typeof NavbarRouteWithChildren
-  '/sandbox': typeof SandboxRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/password-forgot': typeof AuthPasswordForgotRoute
   '/_auth/password-reset': typeof AuthPasswordResetRoute
@@ -150,7 +141,6 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/sandbox'
     | '/login'
     | '/password-forgot'
     | '/password-reset'
@@ -162,7 +152,6 @@ export interface FileRouteTypes {
     | '/recipe/'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/sandbox'
     | '/login'
     | '/password-forgot'
     | '/password-reset'
@@ -175,7 +164,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_auth'
     | '/_navbar'
-    | '/sandbox'
     | '/_auth/login'
     | '/_auth/password-forgot'
     | '/_auth/password-reset'
@@ -192,7 +180,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   AuthRoute: typeof AuthRouteWithChildren
   NavbarRoute: typeof NavbarRouteWithChildren
-  SandboxRoute: typeof SandboxRoute
 }
 export interface FileServerRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatServerRoute
@@ -218,13 +205,6 @@ export interface RootServerRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sandbox': {
-      id: '/sandbox'
-      path: '/sandbox'
-      fullPath: '/sandbox'
-      preLoaderRoute: typeof SandboxRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/_navbar': {
       id: '/_navbar'
       path: ''
@@ -404,7 +384,6 @@ const NavbarRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRouteWithChildren,
   NavbarRoute: NavbarRouteWithChildren,
-  SandboxRoute: SandboxRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

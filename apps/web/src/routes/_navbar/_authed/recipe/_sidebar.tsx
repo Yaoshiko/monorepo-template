@@ -52,7 +52,10 @@ function RecipesComponent() {
                 {title}
               </Link>
             ))}
-            <Button className="fixed right-5 bottom-5 sm:hidden">
+            <Button
+              aria-label="create-recipe"
+              className="fixed right-5 bottom-5 sm:hidden"
+            >
               <Link to="/recipe/new">
                 <Plus />
               </Link>

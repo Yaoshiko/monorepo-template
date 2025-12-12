@@ -10,7 +10,7 @@ function RecipeSelectionComponent() {
     <div className="flex flex-col items-center">
       <div className="flex flex-col items-center gap-2">
         <h1>Are you hungry already?</h1>
-        <Button asChild>
+        <Button aria-label="create-recipe" asChild>
           <Link to="/recipe/new" activeProps={{ className: 'font-bold' }}>
             Create a new recipe
           </Link>

@@ -75,7 +75,12 @@ function Navbar() {
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center gap-6">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logoSrc} className="w-8" alt={logoAlt} />
+              <img
+                src={logoSrc}
+                className="w-8"
+                alt={logoAlt}
+                fetchPriority="high"
+              />
               <span className="text-xl font-extrabold">{title}</span>
             </Link>
             <div className="text-muted-foreground flex items-center font-medium">

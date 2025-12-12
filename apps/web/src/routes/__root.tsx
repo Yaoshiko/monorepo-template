@@ -69,7 +69,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   return (
-    <html>
+    <html lang="en">
       <head>
         <HeadContent />
       </head>

@@ -51,7 +51,7 @@ services:
         - 'traefik.enable=false'
 
   app:
-    image: docker-swarm-01.local:5000/monorepo-template/app:1.12.0
+    image: docker-swarm-01.local:5000/monorepo-template/app:1.13.0
     secrets:
       - monorepo-template_DB_PASSWORD
       - monorepo-template_BETTER_AUTH_SECRET

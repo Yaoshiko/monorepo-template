@@ -100,17 +100,22 @@ function Navbar() {
           <div className="flex items-center gap-2">
             {!user ? (
               <>
-                <Button asChild variant="outline">
+                <Button aria-label="login" asChild variant="outline">
                   <Link to="/login">Log in</Link>
                 </Button>
-                <Button asChild>
+                <Button aria-label="signup" asChild>
                   <Link to="/signup">Sign up</Link>
                 </Button>
               </>
             ) : (
               <div className="flex items-center gap-2">
                 <Label className="text-md">Hello, {user.firstName}!</Label>
-                <Button className="cursor-pointer" onClick={handleLogout}>
+                <Button
+                  aria-label="logout"
+                  variant="outline"
+                  className="cursor-pointer"
+                  onClick={handleLogout}
+                >
                   Log out
                 </Button>
               </div>
@@ -126,7 +131,7 @@ function Navbar() {
             </Link>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button aria-label="drawer" variant="outline" size="icon">
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
@@ -172,16 +177,18 @@ function Navbar() {
                   <div className="flex flex-col gap-3">
                     {!user ? (
                       <>
-                        <Button asChild variant="outline">
+                        <Button aria-label="login" asChild variant="outline">
                           <Link to="/login">Log in</Link>
                         </Button>
-                        <Button asChild>
+                        <Button aria-label="signup" asChild>
                           <Link to="/signup">Sign up</Link>
                         </Button>
                       </>
                     ) : (
                       <>
-                        <Button onClick={handleLogout}>Log out</Button>
+                        <Button aria-label="logout" onClick={handleLogout}>
+                          Log out
+                        </Button>
                       </>
                     )}
                   </div>

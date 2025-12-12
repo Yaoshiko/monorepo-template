@@ -1,6 +1,15 @@
-FROM node:23-slim AS builder
+FROM node:23-slim
 
-# Create non-root user.
+# Install bash (for entrypoint) and gosu (for dropping privileges safely)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends bash gosu && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create non-root user and group
+RUN groupadd -r app && \
+    useradd -r -g app -d /app -s /usr/sbin/nologin app
+
+# Application directory
 WORKDIR /app
 
 # Copy only built files and necessary runtime dependencies.
@@ -15,7 +24,11 @@ RUN npm install -g pino-pretty
 EXPOSE 3000
 
 # Load secrets.
-ENTRYPOINT ["/bin/bash", "-c", "source /usr/local/bin/load-secrets.sh && exec \"$@\"", "--"]
+ENTRYPOINT ["/bin/bash", "-lc", "\
+  source /usr/local/bin/load-secrets.sh; \
+  chown -R app:app /app; \
+  exec gosu app \"$@\" \
+", "--"]
 
 # Set the command to run the application.
 CMD ["npm", "run", "start"]

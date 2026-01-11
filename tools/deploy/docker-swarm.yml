@@ -38,7 +38,7 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     depends_on:
-      - postgres
+      - database
     networks:
       - app-network
     deploy:

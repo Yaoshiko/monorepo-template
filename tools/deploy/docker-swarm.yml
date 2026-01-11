@@ -51,7 +51,7 @@ services:
         - 'traefik.enable=false'
 
   app:
-    image: docker-swarm-01.local:5000/monorepo-template/app:1.14.0
+    image: docker-swarm-01.local:5000/monorepo-template/app:1.15.0
     secrets:
       - monorepo-template_DB_PASSWORD
       - monorepo-template_BETTER_AUTH_SECRET
@@ -74,10 +74,11 @@ services:
     deploy:
       labels:
         - 'traefik.enable=true'
-        - 'traefik.http.routers.app.rule=PathPrefix(`/`)'
+        - 'traefik.http.routers.app.rule=Host(`donut.yaoshiko.com`) && PathPrefix(`/`)'
         - 'traefik.http.routers.app.entrypoints=websecure'
         - 'traefik.http.routers.app.tls.certresolver=myresolver'
         - 'traefik.http.services.app.loadbalancer.server.port=3000'
+        - 'traefik.swarm.network=portainer_reverse-proxy-network'
       mode: global
       restart_policy:
         condition: on-failure

@@ -74,10 +74,11 @@ services:
     deploy:
       labels:
         - 'traefik.enable=true'
-        - 'traefik.http.routers.app.rule=PathPrefix(`/`)'
+        - 'traefik.http.routers.app.rule=Host(`${PUBLIC_HOSTNAME}`) && PathPrefix(`/`)'
         - 'traefik.http.routers.app.entrypoints=websecure'
         - 'traefik.http.routers.app.tls.certresolver=myresolver'
         - 'traefik.http.services.app.loadbalancer.server.port=3000'
+        - 'traefik.swarm.network=portainer_reverse-proxy-network'
       mode: global
       restart_policy:
         condition: on-failure

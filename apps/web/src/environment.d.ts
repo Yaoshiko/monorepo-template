@@ -27,6 +27,9 @@ declare global {
       // Emulated delay to explore TanStack SWR features.
       FETCH_RECIPES_DELAY: number;
       FETCH_RECIPE_DELAY: number;
+
+      GROQ_API_KEY: string;
+      GROQ_MODEL: string;
     }
   }
 

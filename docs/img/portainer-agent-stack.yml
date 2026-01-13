@@ -1,0 +1,101 @@
+# This is just a template of the Portainer Agent stack for Docker Swarm.
+# You can deploy it by running:
+# docker stack deploy portainer --compose-file=portainer-agent-stack.yml
+
+version: '3.2'
+
+services:
+  agent:
+    image: portainer/agent:lts
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+    networks:
+      - agent_network
+    deploy:
+      mode: global
+      placement:
+        constraints: [node.platform.os == linux]
+
+  portainer:
+    image: portainer/portainer-ee:lts
+    command: -H tcp://tasks.agent:9001 --tlsskipverify
+    ports:
+      - '9443:9443'
+      - '9000:9000'
+      - '8000:8000'
+    volumes:
+      - portainer_data:/data
+    networks:
+      - agent_network
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+
+  reverse-proxy:
+    image: traefik:v3.6.2
+    command:
+      - '--providers.swarm.endpoint=unix:///var/run/docker.sock'
+      - '--providers.swarm.exposedbydefault=false'
+      - '--providers.swarm.network=portainer_reverse-proxy-network'
+      - '--providers.swarm=true'
+      - '--entrypoints.web.address=:80'
+      - '--entrypoints.websecure.address=:443'
+      - '--entrypoints.internal.address=:8080'
+      - '--entrypoints.web.http.redirections.entrypoint.to=websecure'
+      - '--entrypoints.web.http.redirections.entrypoint.scheme=https'
+      - '--certificatesresolvers.myresolver.acme.dnschallenge=true'
+      - '--certificatesresolvers.myresolver.acme.dnschallenge.provider=cloudflare'
+      - '--certificatesresolvers.myresolver.acme.email=nicola.barletta@outlook.it'
+      - '--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json'
+      - '--log.level=INFO'
+      - '--log.format=json'
+      - '--accesslog=true'
+      - '--accesslog.format=json'
+      # TODO: Protect dashboard with auth.
+      - '--api.dashboard=true'
+      # FIXME: Temporary. Remove this.
+      - '--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory'
+    secrets:
+      # FIXME: Probably to be renamed in CF_DNS_API_TOKEN.
+      - tanstack-start-template_CF_DNS_API_TOKEN
+    environment:
+      - CF_DNS_API_TOKEN_FILE=/run/secrets/tanstack-start-template_CF_DNS_API_TOKEN
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8080:8080'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-certificates:/letsencrypt
+    networks:
+      - reverse-proxy-network
+    deploy:
+      labels:
+        - 'traefik.enable=true'
+        - 'traefik.http.routers.traefik.rule=PathPrefix(`/`)'
+        - 'traefik.http.routers.traefik.service=api@internal'
+        - 'traefik.http.routers.traefik.entrypoints=internal'
+        - 'traefik.http.services.traefik.loadbalancer.server.port=8080'
+      mode: global
+      placement:
+        constraints:
+          - node.role == manager
+      restart_policy:
+        condition: on-failure
+
+networks:
+  reverse-proxy-network:
+  agent_network:
+    driver: overlay
+    attachable: true
+
+volumes:
+  portainer_data:
+  traefik-certificates:
+
+secrets:
+  tanstack-start-template_CF_DNS_API_TOKEN:
+    external: true

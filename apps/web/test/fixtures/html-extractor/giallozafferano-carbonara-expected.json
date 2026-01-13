@@ -1,0 +1,83 @@
+{
+  "url": "https://ricette.giallozafferano.it/Spaghetti-alla-Carbonara.html",
+  "title": "Spaghetti alla Carbonara: ricetta originale, facile e cremosa",
+  "jsonLd": [
+    {
+      "@context": "http:\\/\\/schema.org",
+      "@type": "Recipe",
+      "name": "Spaghetti alla Carbonara",
+      "author": {
+        "@type": "Organization",
+        "name": "GialloZafferano"
+      },
+      "datePublished": "2006-12-03 00:00:00",
+      "dateModified": "2025-10-03 16:13:24",
+      "estimatedCost": "Basso",
+      "recipeCategory": "Primi piatti",
+      "image": "https:\\/\\/www.giallozafferano.it\\/images\\/219-21928\\/Spaghetti-alla-Carbonara_650x433_wm.jpg",
+      "description": "Carbonara: la ricetta originale romana passo passo con tuorli, guanciale croccante, pecorino e pepe. Cremosa, semplice, pronta in pochi minuti.",
+      "prepTime": "PT15M",
+      "cookTime": "PT10M",
+      "totalTime": "PT25M",
+      "recipeYield": 4,
+      "recipeIngredient": [
+        "Spaghetti 320 g",
+        "Guanciale 150 g",
+        "Tuorli (di uova medie) 6",
+        "Pecorino Romano DOP 50 g",
+        "Pepe nero q.b."
+      ],
+      "recipeInstructions": [
+        "Per preparare gli spaghetti alla carbonara cominciate mettendo sul fuoco una pentola con l\\u2019acqua salata per cuocere la pasta. Nel frattempo eliminate la cotenna dal guanciale e tagliatelo prima a fette 1 e poi a striscioline spesse circa 1cm 2 3 . La cotenna avanzata potr\\u00e0 essere riutilizzata per insaporire altre preparazioni.\\u00a0",
+        "Versate i pezzetti di guanciale in una padella antiaderente 4 e rosolate per circa 10 minuti a fiamma medio alta, fate attenzione a non bruciarlo altrimenti rilascer\\u00e0 un aroma troppo forte. Nel frattempo tuffate gli spaghetti nell\\u2019acqua bollente 5 e cuoceteli al dente. Intanto versate i tuorli in una ciotola 6 .",
+        "Aggiungete il Pecorino 7 e insaporite con il pepe nero 8 . Amalgamate il tutto con una frusta a mano 9 , sino ad ottenere una crema liscia.\\u00a0",
+        "Intanto il guanciale sar\\u00e0 giunto a cottura 10 ; spegnete il fuoco e utilizzando un mestolo prelevatelo dalla padella, lasciando il fondo di cottura all'interno della padella stessa 11 . Trasferite il guanciale in una ciotolina e tenetelo da parte. Versate una mestolata d\\u2019acqua della pasta in padella 12 , insieme al grasso del guanciale.",
+        "Scolate la pasta al dente direttamente nel tegame con il fondo di cottura 13 . Saltatela brevemente per insaporirla 14 .\\u00a0Togliete dal fuoco e versate il composto di uova e Pecorino nel tegame. Mescolate velocemente per amalgamare 15 .",
+        "Per renderla ben cremosa, al bisogno, potete aggiungere poca acqua di cottura della pasta. Aggiungete il guanciale 16 , mescolate un'ultima volta 17 e servite subito gli spaghetti alla carbonara aggiungendo ancora del pecorino in superficie e un pizzico di pepe nero 18 ."
+      ],
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "http:\\/\\/schema.org\\/CommentAction",
+        "userInteractionCount": "1048"
+      },
+      "keywords": "ricette, ricetta, cucina, cucinare, Spaghetti alla Carbonara, Spaghetti, Guanciale, Tuorli, Pecorino Romano DOP, Pepe nero",
+      "suitableForDiet": [
+        "http:\\/\\/schema.org\\/LowLactoseDiet"
+      ],
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "558,7 kcal",
+        "carbohydrateContent": "61,2 g",
+        "sugarContent": "2,5 g",
+        "fatContent": "23,9 g",
+        "saturatedFatContent": "9 g",
+        "fiberContent": "2,7 g",
+        "cholesterolContent": "255,9 mg",
+        "sodiumContent": "475 mg"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "bestRating": 5,
+        "ratingCount": 2935,
+        "ratingValue": 4.2
+      }
+    },
+    {
+      "@context": "http:\\/\\/schema.org",
+      "@type": "Organization",
+      "name": "GialloZafferano",
+      "url": "https:\\/\\/www.giallozafferano.it\\/",
+      "logo": "https:\\/\\/www.giallozafferano.it\\/style\\/images\\/logo-giallozafferano.svg",
+      "sameAs": [
+        "https:\\/\\/www.facebook.com\\/GialloZafferanolive\\/",
+        "https:\\/\\/www.instagram.com\\/giallozafferano\\/",
+        "https:\\/\\/www.youtube.com\\/user\\/GialloZafferanoTV",
+        "https:\\/\\/x.com\\/giallozafferano",
+        "https:\\/\\/www.tiktok.com\\/@giallozafferano"
+      ]
+    }
+  ],
+  "readableText": "PRESENTAZIONE Volete preparare la vera carbonara cremosa, come da tradizione romana? Bastano pochi ingredienti per preparare questo primo piatto: guanciale croccante, tuorli, Pecorino Romano e pepe nero. Il segreto per ottenere la crema perfetta è mantecare fuori dal fuoco con un po’ di acqua di cottura. Nessuna panna, solo gusto autentico! In questa ricetta vi sveliamo passo dopo passo come ottenere la carbonara originale, cremosa e irresistibile, da preparare con gli spaghetti o con il formato di pasta che preferite. Nella sua semplicità e nella qualità degli ingredienti, la pasta alla carbonara è una delle ricette italiane più amate. Come la cacio e pepe, l'amatriciana o la pasta alla gricia, racchiude in pochi gesti tutta la forza della cucina romana. Se cercate varianti sfiziose o vegetariane della pasta alla carbonara, provate anche: Carbonara di mare Carbonara di mare viareggina Pasta alla carbonara di zucchine Pasta patate e uova Carbonara agli asparagi Carbonara di salmone Supplì alla carbonara Carbonara di mare con gamberi Gnocchi alla carbonara Risotto alla carbonara Le origini della Carbonara La versione più accreditata racconta che la prima Carbonara fu preparata nel 1944 a Roma, al Vicolo della Scrofa, con gli ingredienti a disposizione dei soldati americani: uova, bacon e formaggio. La fantasia di un cuoco romano trasformò questi sapori nel primo prototipo della carbonara. Da allora, la ricetta è evoluta fino a quella che tutti conosciamo e amiamo oggi. Spaghetti Carbonara Preparazione Come preparare gli Spaghetti alla Carbonara Per preparare gli spaghetti alla carbonara cominciate mettendo sul fuoco una pentola con l’acqua salata per cuocere la pasta. Nel frattempo eliminate la cotenna dal guanciale e tagliatelo prima a fette 1 e poi a striscioline spesse circa 1cm 2 3. La cotenna avanzata potrà essere riutilizzata per insaporire altre preparazioni. Versate i pezzetti di guanciale in una padella antiaderente 4 e rosolate per circa 10 minuti a fiamma medio alta, fate attenzione a non bruciarlo altrimenti rilascerà un aroma troppo forte. Nel frattempo tuffate gli spaghetti nell’acqua bollente 5 e cuoceteli al dente. Intanto versate i tuorli in una ciotola 6. Aggiungete il Pecorino 7 e insaporite con il pepe nero 8. Amalgamate il tutto con una frusta a mano 9, sino ad ottenere una crema liscia. Intanto il guanciale sarà giunto a cottura 10; spegnete il fuoco e utilizzando un mestolo prelevatelo dalla padella, lasciando il fondo di cottura all'interno della padella stessa 11. Trasferite il guanciale in una ciotolina e tenetelo da parte. Versate una mestolata d’acqua della pasta in padella 12, insieme al grasso del guanciale. Scolate la pasta al dente direttamente nel tegame con il fondo di cottura 13. Saltatela brevemente per insaporirla 14. Togliete dal fuoco e versate il composto di uova e Pecorino nel tegame. Mescolate velocemente per amalgamare 15. Per renderla ben cremosa, al bisogno, potete aggiungere poca acqua di cottura della pasta. Aggiungete il guanciale 16, mescolate un'ultima volta 17 e servite subito gli spaghetti alla carbonara aggiungendo ancora del pecorino in superficie e un pizzico di pepe nero 18. Conservazione Consigliamo di consumare al momento gli spaghetti alla carbonara. Consiglio Il guanciale non dovrà essere rosolato troppo, altrimenti potrebbe rilasciare un gusto amarognolo. Inoltre è bene aggiungere il guanciale solo all'ultimo per mantenere la sua croccantezza. Per evitare l'effetto frittata è importante aggiungere il composto di tuorli solo a fuoco spento. La mantecatura è un passaggio importante, bisogna mescolare sino a che la cremina non si è addensata. E potete regolare la consistenza aggiungendo acqua di cottura della pasta.Potete utilizzare metà dose di Pecorino e metà dose di Parmigiano per una versione più delicata. Per questa ricetta, ti consigliamo di provare gli Spaghetti n° 3 Rummo. Pasta Rummo, eccezionale tenuta alla cottura.Grazie alla qualità delle semole utilizzate, alla cura dei maestri pastai e al Metodo Lenta Lavorazione®, la pasta Rummo è la prima certificata per la tenuta alla cottura. Gli oltre 175 anni di esperienza e la trafilatura al bronzo rendono Pasta Rummo eccezionale. Scopri di più Domande e risposte Quando aggiungere le uova nella carbonara? Le uova si aggiungono a fuoco spento, dopo aver saltato la pasta nel grasso del guanciale. In questo modo si evita l’effetto frittata e si ottiene una crema vellutata. Perché la carbonara viene secca? La carbonara può risultare secca se le uova cuociono troppo o se manca abbastanza acqua di cottura. Per una consistenza cremosa, aggiungete poca acqua di cottura mentre mescolate il condimento. Come evitare che il guanciale diventi troppo duro? Rosolate il guanciale a fuoco medio-alto ma senza bruciarlo. Deve risultare croccante fuori ma ancora morbido dentro. Aggiungetelo alla pasta solo all’ultimo per mantenere la sua consistenza. Come amalgamare bene la carbonara? Dopo aver scolato la pasta nel tegame con il grasso del guanciale, mescolate bene e spegni il fuoco. Versate il mix di uova e Pecorino e mescolate velocemente, regolando la cremosità con acqua di cottura se necessario. Come si fa la carbonara cremosa senza panna? Usate solo tuorli, Pecorino Romano e acqua di cottura. Aggiungete il composto di uova a fuoco spento e mescolate velocemente per ottenere una crema liscia. Quale guanciale usare per la carbonara? Scegliete un guanciale stagionato e speziato, tagliatelo a striscioline e rosolatelo a fiamma medio-alta senza bruciarlo, per evitare un gusto amarognolo. Qual è la vera ricetta della carbonara? La ricetta tradizionale prevede spaghetti, guanciale, tuorli, Pecorino Romano e pepe nero, senza panna né aglio. Aggiungete il guanciale solo alla fine per mantenerlo croccante. Qual è il formato di pasta più indicato per la carbonara? La pasta più indicata per la carbonara sono gli spaghetti, perché trattengono bene il condimento e si amalgamano perfettamente con la crema di uova e Pecorino. Anche rigatoni e mezze maniche sono ottime alternative, grazie alla loro superficie rigata che cattura meglio il sugo. Quante uova servono per la carbonara per 2 persone? In questo caso, per maggior precisione, consigliamo di calcolare il peso di un tuorlo medio, ovvero 16-17 g, quindi per 2 persone puoi utilizzare circa 50 g di tuorli. Scopri di più sugli ingredienti",
+  "metaDescription": "Carbonara: la ricetta originale romana passo passo con tuorli, guanciale croccante, pecorino e pepe. Cremosa, semplice, pronta in pochi minuti.",
+  "canonicalUrl": "https://ricette.giallozafferano.it/Spaghetti-alla-Carbonara.html"
+}
